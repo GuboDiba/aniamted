@@ -1,0 +1,249 @@
+
+
+   /* .image-container {
+    animation: pulse 2s ease-in-out infinite;
+    display: flex;
+    margin-left: 30%;
+    width: 40%;
+    height: 30%;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  } */
+  .person-container {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .person-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: walk-cycle 0.8s steps(8) infinite;
+  }
+  
+  @keyframes walk-cycle {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1600px; }
+  }
+  
+  
+  /* watches */
+  .product-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+  .watch {
+    width: 30%;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .watch:hover {
+    transform: scale(1.1);
+  }
+  .rotating-watch {
+    animation: rotate 2s linear infinite;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .product-section {
+    background-color: #F8F8F8;
+  }
+  .watch {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .watch:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .buy-button {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  .buy-button:hover {
+    background-color: #0062CC;
+  }
+  .watch h3 {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  .watch p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+    margin: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  .watchtext{
+    text-align: center;
+    color: blue;
+    font-size: 25px;
+  }
+
+  /* led */
+  #led-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #afa1a1;
+  }
+  
+  .led {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+    animation: led-glow s ease-in-out infinite;
+  }
+  
+  @keyframes led-glow {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+ 
+  /* Top */
+  .zoom {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .zoom img {
+    transition: transform 1s ease-out;
+  }
+  
+  .zoom:hover img {
+    transform: scale(0.6);
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+   
+
+  }
+  
+  .image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-container:hover .image-hover {
+    opacity: 1;
+  }
+  .image {
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .image-container:hover .image {
+    animation: slideAnimation 4s linear infinite;
+   
+
+
+  }  
+  
+ 
+  /* cut */
+  .image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .image {
+    transition: opacity 0.5s ease;
+  }
+  
+  .split-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .left-half,
+  .right-half {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .left-half {
+    background-color: black;
+    transform-origin: right center;
+  }
+  
+  .right-half {
+    background-color: white;
+    transform-origin: left center;
+  }
+  
+  .image-container:hover .image {
+    opacity: 0;
+  }
+  
+  .image-container:hover .left-half {
+    transform: translateX(-100%);
+  }
+  
+  .image-container:hover .right-half {
+    transform: translateX(100%);
+  }
+  
